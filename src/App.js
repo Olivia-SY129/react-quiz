@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { PinkButton } from "./components/PinkButton";
 import { next } from "./store/modules/score";
 import styled from "styled-components";
+import { BlueButton } from "./components/BlueButton";
 
 const MainImage = styled.img`
   width: inherit;
@@ -41,6 +42,7 @@ function App() {
               dispatch(next());
             }}
           />
+          <BlueButton text="제작자 블로그 방문" />
         </Main>
       )}
     </>

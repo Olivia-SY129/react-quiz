@@ -4,8 +4,10 @@ import styled from "styled-components";
 const MyButton = styled.a`
   position: relative;
   display: inline-block;
+  margin-bottom: 30px;
   cursor: pointer;
   vertical-align: middle;
+  -webkit-text-decoration: none;
   text-decoration: none;
   line-height: 1.6;
   font-family: inherit;
@@ -13,12 +15,19 @@ const MyButton = styled.a`
   font-weight: bold;
   color: #382b22;
   padding: 1.25em 2em;
-  background: #fff0f0;
-  border: 2px solid #b18597;
+  background: #def2f3;
+  border: 2px solid #85afb1;
   border-radius: 0.75em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out;
+
   &::before {
     content: "";
     position: absolute;
@@ -28,14 +37,14 @@ const MyButton = styled.a`
     right: 0;
     left: 0;
     bottom: 0;
-    background: #f9c4d2;
+    background: #abd0d3;
     border-radius: inherit;
-    box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+    box-shadow: 0 0 0 2px #85afb1, 0 0.625em 0 0 #d0e5e4;
     transform: translate3d(0, 0.75em, -1em);
     transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
   }
   &:hover {
-    background: #ffe9e9;
+    background: #d1f3f5;
     transform: translateY(0.25em);
     &::before {
       transform: translate3d(0, 0.5em, -1em);
