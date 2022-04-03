@@ -1,0 +1,26 @@
+.progress {
+  margin-top: 60px;
+}
+
+.page {
+  margin-bottom: 10px;
+}
+
+.gauge {
+  position: relative;
+  width: 100%;
+  background: #f7f7f7;
+  height: 10px;
+  border-radius: 0.5em;
+}
+
+span.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #c4d8f9;
+  display: inline-block;
+  height: inherit;
+  border-radius: inherit;
+}

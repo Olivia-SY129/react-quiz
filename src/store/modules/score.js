@@ -4,10 +4,10 @@ const CHECK_CORRECT = "score/CHECK_CORRECT";
 const NEXT_PAGE = "score/NEXT_PAGE";
 const RESET = "score/RESET";
 
-export function check({ quizIndex, answerIndex }) {
+export function check({ isCorrect }) {
   return {
     type: CHECK_CORRECT,
-    payload: { quizIndex, answerIndex },
+    payload: { isCorrect },
   };
 }
 
@@ -44,6 +44,23 @@ const initState = {
         },
       ],
     },
+    {
+      q: "미국 수도",
+      a: [
+        {
+          text: "워싱턴 DC",
+          isCorrect: true,
+        },
+        {
+          text: "로스앤젤레스",
+          isCorrect: false,
+        },
+        {
+          text: "뉴욕",
+          isCorrect: false,
+        },
+      ],
+    },
   ],
 };
 
@@ -52,11 +69,7 @@ export default function score(state = initState, action) {
     case CHECK_CORRECT:
       return {
         ...state,
-        score: state.quizes[action.payload.quizIndex].a[
-          action.payload.answerIndex
-        ].isCorrect
-          ? state.score + 1
-          : state.score,
+        score: action.payload.isCorrect ? state.score + 1 : state.score,
       };
     case NEXT_PAGE:
       return {
