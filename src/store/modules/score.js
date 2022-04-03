@@ -28,7 +28,8 @@ const initState = {
   page: 0, // 0: 인트로 페이지, 1~quizes.length: 퀴즈 페이지, quizes.length+1: 마지막 페이지
   quizes: [
     {
-      q: "대한민국 수도",
+      q: "대한민국",
+      img: "/city/korea.jpg",
       a: [
         {
           text: "서울",
@@ -45,7 +46,8 @@ const initState = {
       ],
     },
     {
-      q: "미국 수도",
+      q: "미국",
+      img: "/city/usa.jpg",
       a: [
         {
           text: "워싱턴 DC",
